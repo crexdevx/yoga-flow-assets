@@ -64,7 +64,7 @@ function Index() {
             />
           </div>
 
-          <div className="about-feature__body relative bg-about-navy px-6 py-9 text-about-on-navy sm:px-10 sm:py-12 lg:min-h-72 lg:px-14 lg:py-14 lg:pr-80">
+          <div className="about-feature__body relative bg-about-navy px-6 pb-24 pt-8 text-about-on-navy sm:px-10 sm:pb-24 sm:pt-10 lg:min-h-64 lg:px-14 lg:pb-10 lg:pr-80 lg:pt-10">
             <div className="relative z-10 max-w-3xl">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-about-accent">
                 About Us
@@ -72,7 +72,7 @@ function Index() {
               <h1 id="about-heading" className="font-serif text-3xl leading-tight sm:text-4xl lg:text-5xl">
                 Welcome to our Holistic Sanctuary
               </h1>
-              <p className="mt-5 text-sm leading-7 text-about-muted sm:text-base">
+              <p className="mt-4 text-sm leading-6 text-about-muted sm:text-base sm:leading-7">
                 North East Yoga and Meditation Centre in Guwahati, Assam, is a premier sanctuary
                 for holistic well-being and professional growth. Whether you are seeking personal
                 healing or aspiring to become a certified instructor, our expert-led programs
@@ -82,15 +82,17 @@ function Index() {
               </p>
             </div>
 
-            <div className="about-feature__action mt-8 lg:absolute lg:bottom-7 lg:right-7 lg:z-20 lg:mt-0">
+            <div className="about-feature__action absolute bottom-0 right-0 z-20 flex h-20 items-center rounded-tl-[2.5rem] bg-about-button pl-8 pr-4 sm:h-20 sm:pl-10 sm:pr-6 lg:bottom-0 lg:right-0">
               <Button
                 asChild
                 size="lg"
-                className="h-14 rounded-full bg-about-button px-6 text-sm font-semibold text-about-button-foreground shadow-none transition-transform duration-300 hover:-translate-y-1 hover:bg-about-button focus-visible:ring-about-button sm:px-7"
+                className="group h-auto gap-4 rounded-none bg-transparent p-0 text-base font-bold text-about-button-foreground shadow-none transition-transform duration-300 hover:-translate-y-0.5 hover:bg-transparent focus-visible:ring-about-button sm:text-lg"
               >
                 <Link to="/contact">
                   Join the Community
-                  <ArrowUpRight aria-hidden="true" />
+                  <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-about-arrow text-about-on-navy transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 sm:size-12">
+                    <ArrowUpRight aria-hidden="true" className="size-6" />
+                  </span>
                 </Link>
               </Button>
             </div>

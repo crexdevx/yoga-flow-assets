@@ -67,6 +67,7 @@
   --color-about-accent: var(--about-accent);
   --color-about-button: var(--about-button);
   --color-about-button-foreground: var(--about-button-foreground);
+  --color-about-arrow: var(--about-arrow);
   --color-hero-sky: var(--hero-sky);
 }
 
@@ -111,6 +112,7 @@
   --about-accent: oklch(0.78 0.11 151);
   --about-button: oklch(0.99 0.003 95);
   --about-button-foreground: oklch(0.235 0.06 250);
+  --about-arrow: oklch(0.62 0.105 222);
   --hero-sky: oklch(0.7 0.13 240);
 }
 
@@ -154,20 +156,19 @@
   --about-accent: oklch(0.78 0.11 151);
   --about-button: oklch(0.99 0.003 95);
   --about-button-foreground: oklch(0.22 0.055 250);
+  --about-arrow: oklch(0.68 0.105 222);
   --hero-sky: oklch(0.7 0.13 240);
 }
 
-@media (min-width: 64rem) {
-  .about-feature__body::after {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 19rem;
-    height: 7rem;
-    border-top-left-radius: 4.5rem;
-    background: var(--about-canvas);
-    content: "";
-  }
+.about-feature__action::before {
+  position: absolute;
+  right: 100%;
+  bottom: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+  box-shadow: 1rem 1rem 0 1rem var(--about-button);
+  content: "";
 }
 
 @media (prefers-reduced-motion: no-preference) {
