@@ -60,6 +60,14 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-about-canvas: var(--about-canvas);
+  --color-about-navy: var(--about-navy);
+  --color-about-on-navy: var(--about-on-navy);
+  --color-about-muted: var(--about-muted);
+  --color-about-accent: var(--about-accent);
+  --color-about-button: var(--about-button);
+  --color-about-button-foreground: var(--about-button-foreground);
+  --color-hero-sky: var(--hero-sky);
 }
 
 :root {
@@ -96,6 +104,14 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  --about-canvas: oklch(0.975 0.008 93);
+  --about-navy: oklch(0.235 0.06 250);
+  --about-on-navy: oklch(0.99 0.003 95);
+  --about-muted: oklch(0.9 0.018 245);
+  --about-accent: oklch(0.78 0.11 151);
+  --about-button: oklch(0.99 0.003 95);
+  --about-button-foreground: oklch(0.235 0.06 250);
+  --hero-sky: oklch(0.7 0.13 240);
 }
 
 .dark {
@@ -131,6 +147,44 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+  --about-canvas: oklch(0.17 0.025 250);
+  --about-navy: oklch(0.22 0.055 250);
+  --about-on-navy: oklch(0.99 0.003 95);
+  --about-muted: oklch(0.87 0.018 245);
+  --about-accent: oklch(0.78 0.11 151);
+  --about-button: oklch(0.99 0.003 95);
+  --about-button-foreground: oklch(0.22 0.055 250);
+  --hero-sky: oklch(0.7 0.13 240);
+}
+
+@media (min-width: 64rem) {
+  .about-feature__body::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 19rem;
+    height: 7rem;
+    border-top-left-radius: 4.5rem;
+    background: var(--about-canvas);
+    content: "";
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .about-feature {
+    animation: about-reveal 700ms ease-out both;
+  }
+}
+
+@keyframes about-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @layer base {
