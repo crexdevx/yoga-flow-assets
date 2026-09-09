@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import heroPosterImg from "@/assets/yoga-hero-poster.jpg";
-import heroWebm from "@/assets/yoga-hero.webm.asset.json";
-import heroMp4 from "@/assets/yoga-hero.mp4.asset.json";
+
+const heroWebm = "/yoga-hero.webm";
+const heroMp4 = "/yoga-hero.mp4";
 import { FloatingHeader } from "@/components/floating-header";
 
 export const Route = createFileRoute("/")({
