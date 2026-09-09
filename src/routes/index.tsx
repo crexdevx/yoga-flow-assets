@@ -44,8 +44,8 @@ function Index() {
         preload="metadata"
         poster={heroPosterImg}
       >
-        <source src={heroWebm.url} type="video/webm" />
-        <source src={heroMp4.url} type="video/mp4" />
+        <source src={heroWebm} type="video/webm" />
+        <source src={heroMp4} type="video/mp4" />
       </video>
       <FloatingHeader />
     </section>
