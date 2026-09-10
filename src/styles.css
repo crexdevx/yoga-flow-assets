@@ -69,6 +69,14 @@
   --color-about-button-foreground: var(--about-button-foreground);
   --color-about-arrow: var(--about-arrow);
   --color-hero-sky: var(--hero-sky);
+  --color-why-yoga-section: var(--why-yoga-section);
+  --color-why-yoga-heading: var(--why-yoga-heading);
+  --color-why-yoga-body: var(--why-yoga-body);
+  --color-why-yoga-tagline: var(--why-yoga-tagline);
+  --color-why-yoga-accent: var(--why-yoga-accent);
+  --color-why-cta: var(--why-cta);
+  --color-why-cta-text: var(--why-cta-text);
+  --color-why-cta-hover: var(--why-cta-hover);
 }
 
 :root {
@@ -114,6 +122,14 @@
   --about-button-foreground: oklch(0.235 0.06 250);
   --about-arrow: oklch(0.62 0.105 222);
   --hero-sky: oklch(0.7 0.13 240);
+  --why-yoga-section: oklch(0.99 0.005 95);
+  --why-yoga-heading: oklch(0.25 0.065 220);
+  --why-yoga-body: oklch(0.45 0.04 240);
+  --why-yoga-tagline: oklch(0.55 0.08 210);
+  --why-yoga-accent: oklch(0.68 0.12 200);
+  --why-cta: oklch(0.82 0.1 300);
+  --why-cta-text: oklch(0.25 0.065 250);
+  --why-cta-hover: oklch(0.77 0.11 300);
 }
 
 .dark {
@@ -158,6 +174,14 @@
   --about-button-foreground: oklch(0.22 0.055 250);
   --about-arrow: oklch(0.68 0.105 222);
   --hero-sky: oklch(0.7 0.13 240);
+  --why-yoga-section: oklch(0.16 0.02 250);
+  --why-yoga-heading: oklch(0.96 0.015 95);
+  --why-yoga-body: oklch(0.85 0.025 245);
+  --why-yoga-tagline: oklch(0.75 0.06 210);
+  --why-yoga-accent: oklch(0.68 0.12 200);
+  --why-cta: oklch(0.72 0.12 300);
+  --why-cta-text: oklch(0.2 0.07 250);
+  --why-cta-hover: oklch(0.67 0.13 300);
 }
 
 .about-feature__action::before {
@@ -172,7 +196,9 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .about-feature {
+  .about-feature,
+  .why-yoga-section,
+  .why-us-section {
     animation: about-reveal 700ms ease-out both;
   }
 }
