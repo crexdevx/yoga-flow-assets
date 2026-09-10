@@ -201,6 +201,28 @@
   content: "";
 }
 
+.why-yoga-section {
+  position: relative;
+  background-color: var(--why-yoga-section);
+  background-image:
+    radial-gradient(ellipse 55% 50% at 18% 25%, var(--why-yoga-section-a) 0%, transparent 70%),
+    radial-gradient(ellipse 45% 55% at 82% 72%, var(--why-yoga-section-b) 0%, transparent 65%),
+    radial-gradient(ellipse 35% 35% at 55% 48%, var(--why-yoga-section-a) 0%, transparent 65%);
+}
+
+.why-yoga-section::before {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 40%, oklch(1 0 0 / 0.22) 0%, transparent 65%);
+  content: "";
+  pointer-events: none;
+}
+
+.why-yoga-section > * {
+  position: relative;
+  z-index: 1;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .about-feature,
   .why-yoga-section,
