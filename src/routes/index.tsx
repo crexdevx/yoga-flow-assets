@@ -129,7 +129,7 @@ function Index() {
         </div>
       </section>
 
-      <section aria-labelledby="why-us-heading" className="px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <section aria-labelledby="why-us-heading" className="why-us-section px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-4xl text-center">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-why-yoga-accent">
             Why Choose Us
