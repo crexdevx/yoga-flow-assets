@@ -70,6 +70,8 @@
   --color-about-arrow: var(--about-arrow);
   --color-hero-sky: var(--hero-sky);
   --color-why-yoga-section: var(--why-yoga-section);
+  --color-why-yoga-section-a: var(--why-yoga-section-a);
+  --color-why-yoga-section-b: var(--why-yoga-section-b);
   --color-why-yoga-heading: var(--why-yoga-heading);
   --color-why-yoga-body: var(--why-yoga-body);
   --color-why-yoga-tagline: var(--why-yoga-tagline);
@@ -122,11 +124,16 @@
   --about-button-foreground: oklch(0.235 0.06 250);
   --about-arrow: oklch(0.62 0.105 222);
   --hero-sky: oklch(0.7 0.13 240);
-  --why-yoga-section: oklch(0.99 0.005 95);
-  --why-yoga-heading: oklch(0.25 0.065 220);
-  --why-yoga-body: oklch(0.45 0.04 240);
-  --why-yoga-tagline: oklch(0.55 0.08 210);
-  --why-yoga-accent: oklch(0.68 0.12 200);
+  --why-yoga-section: oklch(from #A8D8C0 90% 0.035 h);
+  --why-yoga-section-a: oklch(from #A8D8C0 92% 0.045 h / 0.28);
+  --why-yoga-section-b: oklch(from #A8D8C0 86% 0.04 h / 0.20);
+  --why-yoga-heading: oklch(from #A8D8C0 25% 0.045 h);
+  --why-yoga-body: oklch(from #A8D8C0 42% 0.03 h);
+  --why-yoga-tagline: oklch(from #A8D8C0 55% 0.05 h);
+  --why-yoga-accent: oklch(from #A8D8C0 65% 0.075 h);
+  --why-cta: oklch(0.82 0.1 300);
+  --why-cta-text: oklch(0.25 0.065 250);
+  --why-cta-hover: oklch(0.77 0.11 300);
   --why-cta: oklch(0.82 0.1 300);
   --why-cta-text: oklch(0.25 0.065 250);
   --why-cta-hover: oklch(0.77 0.11 300);
@@ -174,11 +181,13 @@
   --about-button-foreground: oklch(0.22 0.055 250);
   --about-arrow: oklch(0.68 0.105 222);
   --hero-sky: oklch(0.7 0.13 240);
-  --why-yoga-section: oklch(0.16 0.02 250);
+  --why-yoga-section: oklch(from #A8D8C0 22% 0.03 h);
+  --why-yoga-section-a: oklch(from #A8D8C0 26% 0.035 h / 0.30);
+  --why-yoga-section-b: oklch(from #A8D8C0 18% 0.025 h / 0.22);
   --why-yoga-heading: oklch(0.96 0.015 95);
-  --why-yoga-body: oklch(0.85 0.025 245);
-  --why-yoga-tagline: oklch(0.75 0.06 210);
-  --why-yoga-accent: oklch(0.68 0.12 200);
+  --why-yoga-body: oklch(0.85 0.02 95);
+  --why-yoga-tagline: oklch(from #A8D8C0 75% 0.04 h);
+  --why-yoga-accent: oklch(from #A8D8C0 65% 0.075 h);
   --why-cta: oklch(0.72 0.12 300);
   --why-cta-text: oklch(0.2 0.07 250);
   --why-cta-hover: oklch(0.67 0.13 300);
@@ -193,6 +202,28 @@
   border-bottom-right-radius: 2.5rem;
   box-shadow: 1rem 1rem 0 1rem var(--about-button);
   content: "";
+}
+
+.why-yoga-section {
+  position: relative;
+  background-color: var(--why-yoga-section);
+  background-image:
+    radial-gradient(ellipse 55% 50% at 18% 25%, var(--why-yoga-section-a) 0%, transparent 70%),
+    radial-gradient(ellipse 45% 55% at 82% 72%, var(--why-yoga-section-b) 0%, transparent 65%),
+    radial-gradient(ellipse 35% 35% at 55% 48%, var(--why-yoga-section-a) 0%, transparent 65%);
+}
+
+.why-yoga-section::before {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 40%, oklch(1 0 0 / 0.22) 0%, transparent 65%);
+  content: "";
+  pointer-events: none;
+}
+
+.why-yoga-section > * {
+  position: relative;
+  z-index: 1;
 }
 
 @media (prefers-reduced-motion: no-preference) {
