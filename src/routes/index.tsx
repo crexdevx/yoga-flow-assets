@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 
 import communityYogaImg from "@/assets/community-yoga-class.webp";
+import whyYogaImg from "@/assets/why-yoga-benefits.png.asset.json";
 import heroPosterImg from "@/assets/yoga-hero-poster.jpg";
 import { Button } from "@/components/ui/button";
 
@@ -98,6 +99,62 @@ function Index() {
             </div>
           </div>
         </article>
+      </section>
+
+      <section aria-labelledby="why-yoga-heading" className="why-yoga-section px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="order-2 lg:order-1">
+            <img
+              src={whyYogaImg.url}
+              alt="Illustration of yoga benefits: strength, flexibility, immunity, calm mind, focus, and better sleep"
+              className="mx-auto w-full max-w-lg"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <div className="order-1 lg:order-2">
+            <div className="mb-4 h-1 w-12 bg-why-yoga-accent"></div>
+            <h2 id="why-yoga-heading" className="font-serif text-3xl leading-tight text-why-yoga-heading sm:text-4xl lg:text-5xl">
+              WHY YOGA?
+            </h2>
+            <p className="mt-5 text-base leading-7 text-why-yoga-body sm:text-lg sm:leading-8">
+              Yoga is more than movement. It is a practice that brings together the body, breath,
+              and mind — helping us build strength, flexibility, awareness, and inner balance.
+            </p>
+            <p className="mt-6 text-base italic leading-7 text-why-yoga-tagline sm:text-lg sm:leading-8">
+              Move with awareness. Breathe with purpose. Live with balance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="why-us-heading" className="why-us-section px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-why-yoga-accent">
+            Why Choose Us
+          </p>
+          <h2 id="why-us-heading" className="font-serif text-3xl leading-tight text-why-yoga-heading sm:text-4xl lg:text-5xl">
+            A Space to Grow, Heal & Transform
+          </h2>
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-why-yoga-body sm:text-lg sm:leading-8">
+            At Northeast Yoga and Meditation Centre, we believe yoga is more than a practice—it is
+            a journey toward greater balance, awareness, and well-being. Through authentic yoga and
+            meditation practices, experienced guidance, and a supportive environment, we help
+            individuals deepen their practice and grow with purpose.
+          </p>
+          <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-why-yoga-body sm:text-lg sm:leading-8">
+            We are committed to creating a welcoming space where everyone can learn, practice, and
+            experience the transformative benefits of yoga.
+          </p>
+
+          <Button
+            asChild
+            className="mt-10 inline-flex h-12 items-center justify-center rounded-full bg-why-cta px-8 text-base font-semibold text-why-cta-text shadow-lg transition-all duration-300 hover:bg-why-cta-hover hover:shadow-xl focus-visible:ring-why-cta sm:h-14 sm:px-10 sm:text-lg"
+          >
+            <Link to="/about">Who We Are</Link>
+          </Button>
+        </div>
       </section>
     </main>
   );
